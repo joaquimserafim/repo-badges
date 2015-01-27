@@ -1,0 +1,40 @@
+{
+  "name": "repo-badges",
+  "version": "0.0.0",
+  "description": "cli tool to create the badges for your project",
+  "main": "bin/cli.js",
+  "bin": {
+    "repo-badges": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "istanbul cover tape test/*.js",
+    "jshint": "jshint -c .jshintrc lib/*.js bin/cli.js test/*.js",
+    "code-style": "jscs -p google lib/*.js bin/cli.js test/*.js",
+    "check-coverage": "istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
+    "open-coverage": "open coverage/lcov-report/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaquimserafim/repo-badges.git"
+  },
+  "keywords": [
+    "badges"
+  ],
+  "author": "@joaquimserafim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaquimserafim/repo-badges/issues"
+  },
+  "homepage": "https://github.com/joaquimserafim/repo-badges",
+  "devDependencies": {
+    "istanbul": "^0.3.5",
+    "jscs": "^1.10.0",
+    "jshint": "^2.6.0",
+    "pre-commit": "0.0.11",
+    "tape": "^3.4.0",
+    "which": "^1.0.8"
+  },
+  "dependencies": {
+    "commander": "^2.6.0"
+  }
+}
